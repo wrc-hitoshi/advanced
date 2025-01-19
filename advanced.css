@@ -1,0 +1,32 @@
+*{
+    font-family: 'Noto Serif TC', serif;
+    padding:0px;
+    margin:0px;
+}
+
+.video-image{
+    width: 100%;
+    border-radius: 16px;
+}
+.channel-avatar{
+    width:36px;
+    vertical-align: top;
+}
+
+.div1{
+    width:350px;
+    display:inline-block;
+    vertical-align: top;
+}
+.div3{
+    display: inline-block;
+    width:300px;
+}
+.div4{
+    width:350px;
+    display: inline-block;
+}
+.div6{
+    display:inline-block;
+    width: 300px;
+}
