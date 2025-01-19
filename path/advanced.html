@@ -4,7 +4,9 @@
     ex: http://www.google.com
 相對路徑：相對於現在檔案的位置 
     ex:image.jpg
-    跟此份html檔案在同一個資料夾底下的話，可以直接打上檔案名稱連結
+    跟此份html檔案在同一個資料夾中的話，可以直接打上檔案名稱連結
+    若是在同一個資料夾內的小資料夾的話，那必須加上「資料夾名稱/檔案名稱.副檔名」
+    ex:path/hitoshi.jpeg
     
 -->
 <!DOCTYPE html>
@@ -18,8 +20,7 @@
     </head>
     <body>
         <div class="div1">
-            
-            <!-- 影片網址 https://www.youtube.com/watch?v=Ob_LKCLxg2o -->
+
             <a href="https://www.youtube.com/watch?v=Ob_LKCLxg2o" target="_blank">
                 <img class="video-image" src="video_image1.jpg">
             </a>
@@ -47,6 +48,9 @@
                     <p>觀看次數7次</p>
                 </div>
             </div>
+        </div>
+        <div class="div-test">
+            <img class="photo" src="../hitoshi.jpg">
         </div>
             
             
