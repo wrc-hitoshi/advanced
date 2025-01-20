@@ -1,12 +1,27 @@
 <!-- 
 絕對路徑與相對路徑
 絕對路徑：絕對位置
-    ex: http://www.google.com
+    直接拷貝網址，再用src的方法貼上
+    注意：拷貝的網址為「圖片點右鍵/拷貝影像網址」
+        ex: http://www.japanairline.png
+        <div class="div-test">
+            <img class="photo" src="https://banner2.cleanpng.com/20181112/exs/kisspng-logo-japan-airlines-airplane-boeing-747-1713922788775.webp">
+        </div>
+
 相對路徑：相對於現在檔案的位置 
     ex:image.jpg
     跟此份html檔案在同一個資料夾中的話，可以直接打上檔案名稱連結
     若是在同一個資料夾內的小資料夾的話，那必須加上「資料夾名稱/檔案名稱.副檔名」
-    ex:path/hitoshi.jpeg
+        ex:path/hitoshi.jpeg
+        <div class="div-test">
+            <img class="photo" src="path/hitoshi.jpg">
+        </div>
+    若是目標檔案在上一層，那就使用「../檔案名稱.副檔名」來回到更上一層開啟
+        ex:../hitoshi.jpeg
+        <div class="div-test">
+            <img class="photo" src="../hitoshi.jpg">
+        </div>
+git技巧：在設定好的資料夾內做更動，不要將這個主資料夾再加入到其他更大的資料夾
     
 -->
 <!DOCTYPE html>
@@ -49,13 +64,6 @@
                 </div>
             </div>
         </div>
-        <div class="div-test">
-            <img class="photo" src="../hitoshi.jpg">
-        </div>
-            
-            
-            
-
     </body>
         
 </html>
