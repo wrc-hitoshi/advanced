@@ -3,7 +3,12 @@
     padding:0px;
     margin:0px;
 }
-
+.grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    row-gap: 40px;
+    column-gap: 16px;
+}
 .video-image{
     width: 100%;
     border-radius: 16px;
@@ -14,8 +19,6 @@
 }
 
 .div1{
-    width:350px;
-    display:inline-block;
     vertical-align: top;
 }
 /* 關於用grid的方式做排版 */
@@ -30,11 +33,3 @@
         
     } 
 */
-.div4{
-    width:350px;
-    display: inline-block;
-}
-.div6{
-    display:inline-block;
-    width: 300px;
-}

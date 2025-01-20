@@ -1,5 +1,5 @@
 <!-- 
-grid網格排版
+grid網格排版(二維)
 
 在div標籤中設定css
     display:grid;
@@ -11,11 +11,15 @@ grid網格排版
         <div class="grid">
             <div>abc<div>
         </div>
-        
+
         (css)
         .grid{
             display:grid;
             grid-template-comlumns: 20px 20px 50px;
+            (三個元素 讓他做20 20 50的大小 第四個元素將會遞補至下一行
+            一樣繼續20 20 50的排版)
+            grid-template-comlumns: 1fr 2fr 1fr;
+            (三個元素 大小為1:2:1)
         }
 
 而在css中
