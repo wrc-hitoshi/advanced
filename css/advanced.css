@@ -18,9 +18,15 @@
     display:inline-block;
     vertical-align: top;
 }
+/* 關於用grid的方式做排版 */
+.div2{
+    display: grid;
+    grid-template-columns: 50px 1fr;
+}
 .div3{
-    display: inline-block;
-    width:300px;
+    /* display: inline-block; */
+    /* width:300px; */
+    
 }
 .div4{
     width:350px;

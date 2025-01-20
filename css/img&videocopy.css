@@ -1,0 +1,163 @@
+/* 
+CSS display
+共有三種類型，放在css中來定義該物件的大小排版設定
+1.block
+    用在<h><p>標籤較多，定義此段文字不論長度
+    在網頁上都「佔一整行」
+2.inline-block
+    用在按鈕、小物件比較多，定義該物件
+    「內容多少（長寬）佔多少，可自由設定大小」
+3.inline
+    用在<a>連結較多，也屬於
+    「內容多少佔多少，但不可設定大小」
+ex:
+    h1{
+        display: block
+    }
+變成
+    h1{
+        display: inline-block
+    } 
+搭配網頁檢查器看，看該物件（文字）的display效果，會更好。
+
+在div容器中，被設定的元素可以用%數來和div設定的值做連動
+    ex:
+        .div{
+            width:200px;
+            margin:12px;
+        }
+        .video{
+            width:80%
+        }
+    這樣的話video的width就會隨著div設定的width值自動做調整
+    也就是160px(200*80%=160)
+
+如何讓同一行的元素（標籤）圖片等等和文字對齊!!
+在css中運用vertical-align來解決
+    ex:
+        img,button{
+            vertical-align:top
+        }
+    如此一來就會對齊上面
+    (常有對不齊的狀況，因爲文字多一行或少一行導致版面亂掉。）
+    vertical-align的top是對齊網頁的上面，非兩者平行
+*/
+
+.information{
+    width:500px;
+    margin: 12px;
+}
+.div1{
+    margin: 0px;
+}
+.div2{
+    margin: 10px;
+}
+.channel{
+    display: inline;
+}
+.channel-information{
+    display: inline-block;
+    margin-right: 50px;
+}
+
+p,h1,h2{
+    font-family: Noto,Serif,TC;
+    padding:0px;
+    margin:5px;
+}
+
+
+.title{
+    font-size: 24px;
+    font-weight: 900;
+    display: block;
+}
+
+.little-title{
+    font-size: 18px;
+    font-weight: 500;
+    display: inline-block;
+    width:150px;  
+    vertical-align: middle;
+}
+
+.subscribe-button{
+    font-size:14px;
+    width: 60px;
+    height: 36px;
+    border-radius: 18px;
+    cursor:pointer;
+    color:white;
+    background-color: black;
+    border-style:none;
+    vertical-align: middle;
+}
+
+.subscribe-button:hover{
+    background-color:rgb(31, 31, 31);
+}
+
+.subscribe-button:active{
+    background-color:rgb(61, 61, 61);
+}
+
+
+.thumb-button{
+    font-size:14px;
+    width: 60px;
+    height: 36px;
+    border-radius: 18px;
+    cursor:pointer;
+    border-style:solid;
+    border-color:rgb(195, 195, 195);
+    border-width:1px;
+    background-color: white;
+    vertical-align: middle;
+}
+
+.thumb-button:hover{
+    background-color:rgb(219, 219, 219);
+}
+
+.thumb-button:active{
+    background-color:rgb(173, 173, 173);
+}
+
+
+.share-button{
+    font-size:14px;
+    width: 60px;
+    height: 36px;
+    border-radius: 18px;
+    cursor:pointer;
+    border-style:none;
+    border-color:rgb(195, 195, 195);
+    background-color: rgb(242, 242, 242);
+    vertical-align: middle;
+}
+
+.share-button:hover{
+    background-color:rgb(219, 219, 219);
+}
+
+.share-button:active{
+    background-color:rgb(173, 173, 173);
+}
+.content{
+    font-weight: 200;
+    color:rgb(60,60,60);
+    line-height: 25px;
+    background-color: rgb(242, 242, 242);
+    border-radius: 12px;
+}
+.webvideo{
+    width: 98%;
+    border-radius: 20px;
+}
+.webphoto{
+    width: 60px;
+    border-radius: 10px;
+    margin:5px;
+    vertical-align: middle;
+}

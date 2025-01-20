@@ -1,0 +1,132 @@
+<!-- 
+grid網格排版
+
+在div標籤中設定css
+    display:grid;
+    grid-template-columns:100px 100px;
+    意思為：在本div裡面使用網狀排版，讓此div內都遵照網狀排版模式
+    注意：在此排版內，在外圍的div中 內圈的物件也必須用div括號起來
+    ex:
+        (html)
+        <div class="grid">
+            <div>abc<div>
+        </div>
+        
+        (css)
+        .grid{
+            display:grid;
+            grid-template-comlumns: 20px 20px 50px;
+        }
+
+而在css中
+grid-template-columns為「列」
+grid-template-rows為「行」
+column-gap是「列和列之間的間距」（左右）
+row-gpa是「行跟行之間的間距」（上下）
+-->
+
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <div style="display: inline-block;
+        background-color: gray;">123</div>
+        <div style="display: inline-block;
+        background-color: yellow;">123</div>
+
+        <div style="
+        display: grid;
+        grid-template-columns: 50px 50px;
+        margin-top: 5px;
+        ">
+            <div style=
+            "
+            background-color: gray;">
+            50px</div>
+            <div style="
+            
+            background-color: yellow;">
+            50px<p>test</p></div>
+        </div>
+        
+        <div style="
+        display: grid;
+        grid-template-columns: 100px 50px;
+        margin-top: 5px;
+        ">
+            <div style=
+            "
+            background-color: gray;">
+            100px</div>
+            <div style=
+            "
+            background-color: yellow;">
+            50px</div>
+        </div>
+
+        <div style="
+        display: grid;
+        grid-template-columns: 1fr 5fr;
+        margin-top: 5px;
+        ">
+            <div style=
+            "
+            background-color: gray;">
+            1fr</div>
+            <div style=
+            "
+            background-color: yellow;">
+            5fr</div>
+        </div>
+
+
+
+        <div style="
+        display: grid;
+        grid-template-columns: 32px 32px 40px;
+        margin-top: 30px;
+        column-gap: 20px;
+        row-gap:16px;
+        ">
+            <div style=
+            "
+            background-color: yellow;">
+            32px</div>
+            <div style=
+            "
+            background-color: gray;">
+            32px</div>
+            <div style=
+            "
+            background-color: yellow;">
+            32px</div>
+            <div style=
+            "
+            background-color: gray;">
+            32px</div>
+            <div style=
+            "
+            background-color: yellow;">
+            32px</div>
+            <div style=
+            "
+            background-color: gray;">
+            32px</div>
+            <div style=
+            "
+            background-color: yellow;">
+            32px</div>
+            <div style=
+            "
+            background-color: gray;">
+            32px</div>
+            
+        </div>
+
+
+        
+
+    </body>
+</html>

@@ -1,0 +1,113 @@
+<!-- 
+關於在網站上加入圖片的方法：
+在<body>內輸入<img src="圖片檔名.jpg">
+    ex:<img src="miho.jpg">
+    在img src中也可以給他分群組 加入class或id
+    ex:<img class="webphoto" src="miho.jpg">
+錯誤提醒：出現bug一定要先檢查標籤是否打對打完整。
+    false:<img src="miho.jpg" (少了後面的「>」)
+    true:<img src="miho.jpg">
+
+加入video標籤：
+    在body中加入
+    <video>
+        <source src="影片名稱.mp4">
+    </video>
+若想要影片為可動，則需要再改成
+    <video control>
+    而在影片加上屬性的話，要在<video>標籤裡加入
+        ex:<video class="web" control>
+    才能有辦法在css內去做控制。
+製作超連結的方法：
+    輸入一個a標籤，在裡面輸入目標連結以及文字
+    (a標籤可以放在p標籤內)
+    <a href="網站連結">你想呈現的文字</a>
+    ex: <a href="https://github.com">
+            github官網
+        <a>
+    href的功用指的是 導向到這個網站
+    而如果想要網站開新分頁，則需要加上 target="_blank"
+    ex: <a href="https://github.com" target="_blank">
+        github官網
+    </a>
+若是想要用圖片連結到某個網站或線上影片，可以這樣做
+    ex:
+    <a href="www.youtube.com" target="_blank">
+        <img src="image.jpeg">        
+    </a>
+
+DIV標籤的功用（div容器）
+<div></div>的display預設為block，中間可塞入文字、有點像h標籤
+在調整排版時，若是直接在css中調整寬度(width)、文字或圖片等等的元素
+會受到padding和margin影響、還是看起來不整齊。（利用網頁檢查中
+的model box看，padding和margin會突出一截）
+應用方法：在div標籤內設定一個class，接著在css中定義這個class的
+寬度為xxx
+    ex:
+        <div class="information">
+            <h1><h1>
+            <p></p>
+            <img src="img.jpg">
+        </div>
+    在css中
+        .information{
+            width: 650px;    
+            border-width: 1px;
+            margin: 5px;
+            padding: 12px;
+        }
+利用div容器做網頁排版，先將網頁拆解成一個一個區塊
+這樣會比較容易排版。
+div的預設屬性是block(佔一整行)
+
+
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>【python】4天初學者Python教學</title>
+        <link rel="stylesheet" href="css/img&video.css">
+    </head>
+    <body>
+        <div class="information">
+
+            <div class="div1">
+                <video class="webvideo" controls>
+                    <source src="7860-1.mov">
+                </video>
+            </div>
+            <div class="div2">
+                <h1 class="title">【python】4天初學者Python教學 #python #python教學 #python入門</h1>
+                
+                <div>
+                    <div class="channel"> 
+                        <!-- 讓此div保持在同一行 -->
+
+                        <div class="channel-information">
+                            <!-- 在這裡用inline-block，讓此div內的物件都保持在同一行！ -->
+                            <!-- 按鈕預設為inline-block -->
+                            <img class="webphoto" src="mihowebtest.jpeg">      
+                            <h2 class="little-title">GrandmaCan -我阿嬤都會</h2>
+                        </div>
+                            <button class="subscribe-button">訂閱</button>
+                            <button class="thumb-button">按讚</button>
+                            <button class="share-button">分享</button>   
+                    </div>
+                    <hr/>
+                    <div>
+                        <p class="content">
+                            觀看次數：878,787次  1987年8月7日 <br />
+                            👵阿嬤都能學會的python教學 <br />
+                            ✏️扎實的練習、有趣的專案，讓你學會如何應用python到實際生活中! <br />
+                        
+                            <a href="https://github.com" target="_blank">
+                                GITHUB
+                            </a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        
+        </div>
+    </body>
+</html>
