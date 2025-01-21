@@ -1,0 +1,321 @@
+<!-- 
+
+flex平面排版（一維）
+
+在div標籤中設定css
+    display:flex;
+    flex-direction:row;
+        意思為：在本div裡面使用flex平面排版，讓此div內都遵照平面排版模式
+        注意：在此排版內，在外圍的div中 內圈的物件也必須用div括號起來
+        ex:
+            (html)
+            <div class="flex">
+                <div class="text">abc<div>
+                <div class="text1">abc<div>
+            </div>
+            
+            <div class="flex">
+                <div class="1fr">1fr</div>
+                <div class="2fr">2fr</div>
+            </div>
+
+            (css)
+            .flex{
+                display:flex;
+                flex-dicretion: row;
+                
+            
+            }
+            .text{
+                background-color:yellow;
+                width:100px;   (flex的話直接在小div裡面改)
+            }
+            .text1{
+                background-color:blue;
+                width:200px;   (共形成兩列並行，接續在旁邊、不換行)
+            }
+            (兩個元素 讓他做100 200的大小 若要遞補至下一行
+                則需要重新再寫一份外圈的div，屬性為flex)
+            
+            .1fr{
+                flex:1;
+            }
+            .2fr{
+                flex:2;
+            }
+            （與gird不同的是，flex是在內圈的div控制參數）
+            （讓此物件成為1:2的大小）
+    
+    justify-content: 在外圈div的css中 設定內圈裡小div的水平排版。
+    （在邊框裡站什麼位置）
+
+        center; (中間)
+        start; （左側）
+        end; （右側）
+        space-between; (中間佔一格 剩下兩個往兩邊散開到最底)
+    
+    align-items: 在外圈div的css中 設定內圈元素的垂直排版。
+    
+        預設值為「stretch;」（上下填滿整個div容器範圍）
+        center; (元素保持在垂直的中間)
+        start; （上）
+        end; （下）
+
+            ex:
+                <div style="
+                display: flex;
+                flex-direction: row;
+                border-style: solid;
+                justify-content: start;
+                align-items: stretch;
+                
+                ">
+                    <div style="
+                    width:100px;
+                    ">
+                    abcdefg
+                    <div>
+
+                    <div style="
+                    width:100px;
+                    ">
+                    abcdefg
+                    <div>
+                </div>
+        
+
+        
+
+
+
+而在css中
+grid-template-columns為「列」
+grid-template-rows為「行」
+column-gap是「列和列之間的間距」（左右）
+row-gpa是「行跟行之間的間距」（上下）
+
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+
+    <body>
+        <div style="
+            display: flex;
+            flex-direction: row;
+            ">
+
+            <div style="
+            background-color: bisque;
+            width:80px;
+            ">
+            80px
+            </div>
+            <div style="
+            background-color: aquamarine;
+            width:80px;
+            ">
+            80px
+            </div>
+        </div>
+
+<!-- 40 100 40 100 -->
+<!-- 40 100 40 100 -->
+
+        <div style="
+            display: flex;
+            flex-direction: row;
+            margin-top:30px;
+            ">
+            
+            <div style="
+            background-color: bisque;
+            width:40px;
+            ">
+            40px
+            </div>
+            <div style="
+            background-color: aquamarine;
+            width:100px;
+            ">
+            100px
+            </div>
+            <div style="
+            background-color: bisque;
+            width:40px;
+            ">
+            40px
+            </div>
+            <div style="
+            background-color: aquamarine;
+            width:100px;
+            ">
+            100px
+            </div>
+        </div>
+        
+        <div style="
+            display: flex;
+            flex-direction: row;
+            margin-top:0px;
+            ">
+            
+            <div style="
+            background-color: bisque;
+            width:40px;
+            ">
+            40px
+            </div>
+            <div style="
+            background-color: aquamarine;
+            width:100px;
+            ">
+            100px
+            </div>
+            <div style="
+            background-color: bisque;
+            width:40px;
+            ">
+            40px
+            </div>
+            <div style="
+            background-color: aquamarine;
+            width:100px;
+            ">
+            100px
+            </div>
+        </div>
+
+<!-- 40px 1fr 2fr -->
+
+        <div style="
+            display: flex;
+            flex-direction: row;
+            margin-top:30px;
+            ">
+            
+            <div style="
+            background-color: bisque;
+            width:40px;
+            ">
+            40px
+            </div>
+            <div style="
+            background-color: aquamarine;
+            flex: 1;
+            ">
+            1fr
+            </div>
+            <div style="
+            background-color: bisque;
+            flex: 2;
+            ">
+            2fr
+            </div>
+        </div>
+
+<!-- justify-content -->
+
+        <div style="
+            display: flex;
+            flex-direction: row;
+            margin-top:30px;
+            height: 80px;
+            border-width: 2px;
+            border-style: solid;
+            border-color: gray;
+
+            justify-content: center;
+            ">
+
+            <div style="
+            background-color: bisque;
+            width:100px;
+            ">
+            100px
+            </div>
+            <div style="
+            background-color: aquamarine;
+            width:100px;
+            ">
+            100px
+            </div>
+            <div style="
+            background-color: bisque;
+            width:100px;
+            ">
+            100px
+            </div>
+        </div>
+
+        <div style="
+            display: flex;
+            flex-direction: row;
+            margin-top:30px;
+            height: 80px;
+            border-width: 2px;
+            border-style: solid;
+            border-color: gray;
+
+            justify-content: space-between;
+            ">
+
+            <div style="
+            background-color: bisque;
+            width:100px;
+            ">
+            100px
+            </div>
+            <div style="
+            background-color: aquamarine;
+            width:100px;
+            ">
+            100px
+            </div>
+            <div style="
+            background-color: bisque;
+            width:100px;
+            ">
+            100px
+            </div>
+        </div>
+
+<!-- justify-content + align-items -->
+
+        <div style="
+            display: flex;
+            flex-direction: row;
+            margin-top:30px;
+            height: 80px;
+            border-width: 2px;
+            border-style: solid;
+            border-color: gray;
+
+            justify-content: space-between;
+            align-items: end;
+            ">
+
+            <div style="
+            background-color: bisque;
+            width:100px;
+            ">
+            100px
+            </div>
+            <div style="
+            background-color: aquamarine;
+            width:100px;
+            ">
+            100px
+            </div>
+            <div style="
+            background-color: bisque;
+            width:100px;
+            ">
+            100px
+            </div>
+        </div>
+
+    </body>
+</html>
